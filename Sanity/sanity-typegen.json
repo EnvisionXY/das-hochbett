@@ -1,0 +1,5 @@
+{
+  "path": "../das-hochbett/src/**/*.{ts,tsx,js,jsx}",
+  "schema": "./schema.json",
+  "generates": "../das-hochbett/src/sanity/types.ts"
+}
