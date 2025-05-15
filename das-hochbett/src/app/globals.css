@@ -1,1 +1,39 @@
-@import "tailwindcss";
+/* globals.css */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f3f5;
+}
+
+main {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header,
+footer {
+  margin: 0 auto;
+  padding: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}

@@ -1,34 +1,25 @@
-import Link from "next/link";
 import { defineQuery } from "next-sanity";
 import { sanityFetch } from "@/sanity/live";
+
+import type { Event } from "../sanity/types";
+import { EventListByMonth } from "@/components/EventListByMonth";
 
 const EVENTS_QUERY = defineQuery(`*[
   _type == "event"
   && defined(slug.current)
-]{_id, artist, slug, date}|order(date desc)`);
+]{_id, artist, subtitle, slug, date, "imageUrl": image.asset->url}|order(date asc)`);
 
 export default async function IndexPage() {
-  const { data: events } = await sanityFetch({ query: EVENTS_QUERY });
+  const { data: events }: { data: Event[] } = await sanityFetch({
+    query: EVENTS_QUERY,
+  });
+
   return (
-    <main className="flex bg-gray-100 min-h-screen flex-col p-24 gap-12">
-      <h1 className="text-4xl font-bold tracking-tighter">Events</h1>
-      <ul className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-        {events.map((event) => (
-          <li className="bg-white p-4 rounded-lg" key={event._id}>
-            <Link
-              className="hover:underline"
-              href={`/events/${event?.slug?.current}`}
-            >
-              <h2 className="text-xl font-semibold">{event?.artist}</h2>
-              {event?.date && (
-                <p className="text-gray-500">
-                  {new Date(event.date).toLocaleDateString()}
-                </p>
-              )}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <main className="main-page">
+      <h1 className="main-title">
+        Veranstaltungen <span className="year">{new Date().getFullYear()}</span>
+      </h1>
+      <EventListByMonth events={events} />
     </main>
   );
 }

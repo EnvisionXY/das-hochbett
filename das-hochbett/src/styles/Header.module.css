@@ -1,0 +1,26 @@
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+}

@@ -107,6 +107,7 @@ export type Event = {
     crop?: SanityImageCrop;
     _type: "image";
   };
+  imageUrl?: string;
   details?: Array<{
     children?: Array<{
       marks?: Array<string>;
@@ -200,7 +201,21 @@ export type Slug = {
   source?: string;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Artist | Event | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Venue | Slug;
+export type AllSanitySchemaTypes =
+  | SanityImagePaletteSwatch
+  | SanityImagePalette
+  | SanityImageDimensions
+  | SanityFileAsset
+  | Geopoint
+  | Artist
+  | Event
+  | SanityImageCrop
+  | SanityImageHotspot
+  | SanityImageAsset
+  | SanityAssetSourceData
+  | SanityImageMetadata
+  | Venue
+  | Slug;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ../das-hochbett/src/app/events/[slug]/page.tsx
 // Variable: EVENT_QUERY
@@ -273,7 +288,7 @@ export type EVENTS_QUERYResult = Array<{
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    "*[\n    _type == \"event\" &&\n    slug.current == $slug\n  ][0]{\n  ...,\n  \"date\": coalesce(date, now()),\n  \"doorsOpen\": coalesce(doorsOpen, 0),\n  headline->,\n  venue->\n}": EVENT_QUERYResult;
-    "*[\n  _type == \"event\"\n  && defined(slug.current)\n]{_id, artist, slug, date}|order(date desc)": EVENTS_QUERYResult;
+    '*[\n    _type == "event" &&\n    slug.current == $slug\n  ][0]{\n  ...,\n  "date": coalesce(date, now()),\n  "doorsOpen": coalesce(doorsOpen, 0),\n  headline->,\n  venue->\n}': EVENT_QUERYResult;
+    '*[\n  _type == "event"\n  && defined(slug.current)\n]{_id, artist, slug, date}|order(date desc)': EVENTS_QUERYResult;
   }
 }
