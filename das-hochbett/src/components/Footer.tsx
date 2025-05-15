@@ -1,7 +1,8 @@
-// src/components/Footer.tsx
+import styles from "../styles/Footer.module.css";
+
 export default function Footer() {
   return (
-    <footer className="mt-12 border-t pt-6 text-center text-sm text-gray-500">
+    <footer className={styles.footer}>
       <p>© {new Date().getFullYear()} Das Hochbett. All rights reserved.</p>
     </footer>
   );

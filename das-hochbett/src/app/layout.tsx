@@ -4,7 +4,6 @@ import "./globals.css";
 import { SanityLive } from "@/sanity/live";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import "./app-page.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

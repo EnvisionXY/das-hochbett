@@ -1,0 +1,39 @@
+.container {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.intro {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.profileCard {
+  background-color: #f1f3f5;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.profileName {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.profileRole {
+  font-size: 0.875rem;
+  color: #666;
+}

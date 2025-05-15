@@ -1,16 +1,18 @@
+import styles from "@/styles/About.module.css";
+
 export default function AboutPage() {
   return (
-    <main className="container mx-auto max-w-3xl p-12 space-y-8">
-      <h1 className="text-4xl font-bold">Über uns</h1>
+    <main className={styles.container}>
+      <h1 className={styles.heading}>Über uns</h1>
 
-      <p className="text-lg">
+      <p className={styles.paragraph}>
         Das Hochbett ist eine Plattform für Livemusik, Clubkultur und
         audiovisuelle Formate. Wir veranstalten regelmäßig Konzerte, Listening
         Sessions, DJ-Sets und hybride Formate zwischen Klangkunst und
         Performance.
       </p>
 
-      <p className="text-lg">
+      <p className={styles.paragraph}>
         Unser Raum ist ein Ort für musikalische Entdeckungen, jenseits
         ausgetretener Genrepfade – für Acts, die Geschichten erzählen,
         Atmosphären schaffen und das Publikum mitnehmen auf eine Reise. Wir
@@ -18,13 +20,13 @@ export default function AboutPage() {
         zu öffnen und Räume zu gestalten.
       </p>
 
-      <p className="text-lg">
+      <p className={styles.paragraph}>
         Das Hochbett wird kuratiert von Musikern, Künstlern und Szenemenschen –
         mit einem Faible für Sounds zwischen Post-Rock, Electronica, Spoken Word
         und Jazz.
       </p>
 
-      <p className="text-lg">
+      <p className={styles.paragraph}>
         Wir lieben DIY-Kultur, ehrliche Leidenschaft und musikalische Tiefe.
         Unser Ziel: besondere Abende schaffen, die in Erinnerung bleiben.
       </p>

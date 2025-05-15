@@ -1,0 +1,13 @@
+/* Event.module.css */
+
+.mainPage {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.mainTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}

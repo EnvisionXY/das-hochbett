@@ -1,18 +1,18 @@
+import styles from "@/styles/Jobs.module.css";
+
 export default function JobsPage() {
   return (
-    <main className="container mx-auto max-w-3xl px-6 py-12 space-y-8">
-      <h1 className="text-4xl font-bold tracking-tight">Jobs</h1>
-      <section className="space-y-4">
+    <main className={styles.container}>
+      <h1 className={styles.heading}>Jobs</h1>
+      <section className={styles.section}>
         <p>
           Das Hochbett ist ein Ort für Musik, Kunst und Begegnung. Damit unsere
           Veranstaltungen auf höchstem Niveau bleiben, suchen wir regelmäßig
           Unterstützung in verschiedenen Bereichen.
         </p>
 
-        <h2 className="text-2xl font-semibold mt-6">
-          Aktuelle Stellenangebote
-        </h2>
-        <ul className="list-disc pl-6 space-y-2">
+        <h2 className={styles.subheading}>Aktuelle Stellenangebote</h2>
+        <ul className={styles.list}>
           <li>
             <strong>Technik & Stagehand:</strong> Du kennst dich mit Ton- und
             Lichttechnik aus und liebst Live-Situationen? Dann melde dich bei
@@ -28,19 +28,16 @@ export default function JobsPage() {
           </li>
         </ul>
 
-        <h2 className="text-2xl font-semibold mt-6">Was wir bieten</h2>
-        <ul className="list-disc pl-6 space-y-2">
+        <h2 className={styles.subheading}>Was wir bieten</h2>
+        <ul className={styles.list}>
           <li>Ein herzliches Team mit viel Erfahrung im Kulturbereich</li>
           <li>Flexible Arbeitszeiten, faire Bezahlung</li>
           <li>Freier Eintritt zu allen Veranstaltungen</li>
         </ul>
 
-        <p className="mt-6">
+        <p className={styles.contact}>
           Schick uns einfach eine formlose Bewerbung an
-          <a
-            href="mailto:booking@das-hochbett.de"
-            className="text-blue-500 underline ml-1"
-          >
+          <a href="mailto:booking@das-hochbett.de" className={styles.emailLink}>
             booking@das-hochbett.de
           </a>
            oder sprich uns direkt bei einer Veranstaltung an.

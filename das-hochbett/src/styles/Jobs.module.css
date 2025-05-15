@@ -1,0 +1,43 @@
+/* src/styles/Jobs.module.css */
+.container {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: -0.015em;
+}
+
+.section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact {
+  margin-top: 1.5rem;
+}
+
+.emailLink {
+  color: #3b82f6;
+  text-decoration: underline;
+  margin-left: 0.25rem;
+}

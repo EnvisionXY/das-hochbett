@@ -1,6 +1,7 @@
 import { Event } from "@/sanity/types";
 import Link from "next/link";
 import Image from "next/image";
+import styles from "../styles/EventList.module.css";
 
 type Props = {
   events: Event[];
@@ -18,30 +19,30 @@ export function EventListByMonth({ events }: Props) {
   }, {} as Record<string, Event[]>);
 
   return (
-    <div className="event-list">
+    <div className={styles.eventList}>
       {Object.entries(grouped).map(([month, events]) => (
         <section key={month} className="event-month">
-          <h2 className="month-heading">{month}</h2>
-          <ul className="events-grid">
+          <h2 className={styles.monthHeading}>{month}</h2>
+          <ul className={styles.eventsGrid}>
             {events.map((event) => (
-              <li className="event-card" key={event._id}>
+              <li className={styles.eventCard} key={event._id}>
                 <Link
                   href={`/events/${event?.slug?.current}`}
-                  className="event-link"
+                  className={styles.eventLink}
                 >
-                  <div className="event-info">
-                    <h3 className="event-artist">{event.artist}</h3>
+                  <div className={styles.eventInfo}>
+                    <h3 className={styles.eventArtist}>{event.artist}</h3>
                     {event.subtitle && (
-                      <p className="event-subtitle">{event.subtitle}</p>
+                      <p className={styles.eventSubtitle}>{event.subtitle}</p>
                     )}
                     {event.date && (
-                      <p className="event-date">
+                      <p className={styles.eventDate}>
                         {new Date(event.date).toLocaleDateString("de-DE")}
                       </p>
                     )}
                   </div>
                   {"imageUrl" in event && event.imageUrl && (
-                    <div className="event-image">
+                    <div className={styles.eventImage}>
                       <Image
                         src={event.imageUrl}
                         alt={event.artist || "Event"}

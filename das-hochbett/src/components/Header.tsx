@@ -6,14 +6,24 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href="/" className={styles.logo}>
-          Das Hochbett
+          DAS HOCHBETT
         </Link>
         <div className={styles.navLinks}>
-          <Link href="/">Events</Link>
-          <Link href="/about">Über uns</Link>
-          <Link href="/team">Das Team</Link>
-          <Link href="/jobs">Jobs</Link>
-          <Link href="/kontakt">Kontakt</Link>
+          <Link href="/" className={styles.navLink}>
+            Events
+          </Link>
+          <Link href="/about" className={styles.navLink}>
+            Über uns
+          </Link>
+          <Link href="/team" className={styles.navLink}>
+            Das Team
+          </Link>
+          <Link href="/jobs" className={styles.navLink}>
+            Jobs
+          </Link>
+          <Link href="/kontakt" className={styles.navLink}>
+            Kontakt
+          </Link>
         </div>
       </nav>
     </header>

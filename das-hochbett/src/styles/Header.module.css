@@ -6,7 +6,7 @@
 .nav {
   max-width: 74rem;
   margin: 0 auto;
-  padding: 1rem 3rem;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,12 +15,17 @@
 .logo {
   font-size: 1.25rem;
   font-weight: bold;
-  text-decoration: none;
-  color: inherit;
+  text-decoration: overline;
+  text-decoration-thickness: 5px;
+  color: #fd7e14;
 }
 
 .navLinks {
   display: flex;
   gap: 1rem;
   font-size: 0.875rem;
+}
+
+.navLink:hover {
+  color: #fd7e14;
 }
