@@ -1,7 +1,7 @@
 .container {
   max-width: 74rem;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
