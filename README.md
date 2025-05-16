@@ -92,11 +92,6 @@ npm run deploy
 * Events werden in der Übersicht nach Monaten gruppiert (Mai, Juni, etc.).
 * Jedes Event wird mit Bild, Subtitle, Uhrzeit & Link zur Detailseite dargestellt.
 
-### ✅ Responsive Design
-
-* Die Website ist für Desktop und Mobilgeräte optimiert.
-* Bildkomponenten passen sich dem Seitenverhältnis des Originalbilds an.
-
 ### ✅ Deployment
 
 * Das Frontend wird über **Vercel** gehostet:
